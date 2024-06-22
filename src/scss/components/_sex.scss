@@ -1,0 +1,69 @@
+.sex-wrap{
+    @include column-flexbox(start,start);
+    padding: 64px 20px 86px 20px;
+    position: relative;
+    height: 100vh;
+    .backward-image{
+        display: block;
+        width: 28px;
+        height: auto;
+        margin-bottom: 28px;
+    }
+    .image-wrap{
+        @include flexbox(between,center);
+        width: 100%;
+        .card{
+            display: block;
+            width: 181px;
+            height: 230px;
+            border-radius: 16px;
+            background-color: #efefef;
+            margin-right: 8px;
+            padding: 20px;
+            position: relative;
+            &.active{
+                background-color: #fffbee;
+                border: 1px solid #ecaa00;
+            }
+            &:last-of-type{
+                margin-right: 0;
+            }
+            .yellowcheck{
+                display: block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+                color: #707070;
+                &.active{
+                    color: #d68d00;
+                }
+            }
+            img{
+                display: block;
+                width: 148px;
+                height: auto;
+            }
+        }
+        
+    }
+    h1{
+        @include text-style-24;
+        margin-bottom:52px
+    }
+    .button-wrap{
+        @include column-flexbox(end,center);
+        width: 100%;
+        height: 100%;
+        button{
+            @extend %btn-base;
+            
+        }
+    }
+}
